@@ -1,0 +1,31 @@
+/* bugSolution.css */
+/* Correcting inconsistent units */
+.correct-units {
+  width: calc(100% - 50px);
+}
+
+/* Correcting operator precedence in nested calc() */
+.correct-precedence {
+  width: calc(50% + calc(50% - 20px));
+}
+
+/* Using parentheses for clarity in nested calc() */
+.clear-parentheses {
+  width: calc((100% - 50px) / 2);
+}
+
+/* Avoid complex nested calculations for maintainability */
+.simple-calc {
+  width: 50%;
+  margin-left: 25px;
+}
+
+/* Consider using CSS variables for better maintainability and readability */
+:root {
+  --main-width: 50%;
+  --offset: 25px;
+}
+.css-variables {
+  width: var(--main-width);
+  margin-left: var(--offset);
+}
